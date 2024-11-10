@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendipia - Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Welcome to Serendipia</h1>
+        <p>Your one-stop shop for Beauty, Fashion, and More!</p>
+    </header>
+
+    <nav>
+        <a href="#intro">Home</a>
+        <a href="#products">Products</a>
+        <a href="#registration">Register</a>
+        <div class="dark-mode-switch">
+            <p>Dark Mode</p>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+
+    <section id="intro">
+        <h2>Your One-Stop Shop for Beauty, Fashion, and More!</h2>
+        <p>ETA 7-14 days for your orders. Categories:</p>
+        <ul>
+            <li>Beauty</li>
+            <li>Fashion</li>
+            <li>K-Pop Merch</li>
+            <li>Snacks</li>
+            <li>Etc.</li>
+        </ul>
+    </section>
+
+    <!-- Product Gallery Section -->
+    <section class="product-gallery" id="products">
+        <div class="product">
+            <img src="img1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Product 1 Description.</p>
+        </div>
+        <div class="product">
+            <img src="img2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Product 2 Description.</p>
+        </div>
+        <div class="product">
+            <img src="img3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Product 3 Description.</p>
+        </div>
+        <div class="product">
+            <img src="img4.jpg" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Product 4 Description.</p>
+        </div>
+        <div class="product">
+            <img src="img5.jpg" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Product 5 Description.</p>
+        </div>
+        <div class="product">
+            <img src="img6.jpg" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>Product 6 Description.</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="registration">
+        <h2>Register to Shop Online</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a Password" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Your Address" rows="3" required></textarea>
+            
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                Subscribe to our newsletter for updates and offers!
+            </label>
+            
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Serendipia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
