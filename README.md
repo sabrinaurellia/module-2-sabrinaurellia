@@ -28,6 +28,8 @@
 1. Update this **README.md** file to document all steps of the process, including the Netlify setup, domain registration, and DNS configuration.
 2. Ensure to include screenshots and any additional details required to explain the deployment process.
 
+
+- [Web deployment](https://serendipiaid.netlify.app/)
 ---
 
 ## Resources
