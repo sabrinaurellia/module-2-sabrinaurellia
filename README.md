@@ -29,7 +29,7 @@
 2. Ensure to include screenshots and any additional details required to explain the deployment process.
 
 
-- [Web deployment](https://serendipiaid.netlify.app/)
+- The domain name is customised as [Serendipia](https://serendipiaid.netlify.app/)
 ---
 
 ## Resources
