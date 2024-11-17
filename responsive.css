@@ -1,22 +1,18 @@
 .mobile {
-    display: none;
-}
-
-.desktop {
     display: block;
 }
 
+.desktop {
+    display: none;
+}
+
+header {
+    background-image: url('img/background.jpg');
+}
+
 @media only screen and (max-width: 1023px) {
-    .mobile {
-        display: block;
-    }
-
-    .desktop {
-        display: none;
-    }
-
     header {
-        background-image: url('img/mobile-background.jpg');
+        background-image: url('img/background.jpg');
     }
 
     .product-gallery {
@@ -39,7 +35,6 @@
     }
 }
 
-/* Desktop Styles */
 @media only screen and (min-width: 1024px) {
     .product-gallery {
         grid-template-columns: repeat(3, 1fr);
