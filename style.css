@@ -120,6 +120,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 20px;
+    list-style: square;
 }
 
 .product-gallery .product {
@@ -137,6 +138,30 @@ header {
 .product-gallery img {
     width: 100%;
     height: auto;
+}
+
+.product-gallery .product:nth-child(1) {
+    grid-column: span 2; 
+}
+
+.product-gallery .product:nth-child(2) {
+    grid-column: span 1; 
+}
+
+.product-gallery .product:nth-child(3) {
+    grid-column: span 1; 
+}
+
+.product-gallery .product:nth-child(4) {
+    grid-column: span 2; 
+}
+
+.product-gallery .product:nth-child(5) {
+    grid-column: span 1; 
+}
+
+.product-gallery .product:nth-child(6) {
+    grid-column: span 1;
 }
 
 footer {
