@@ -3,161 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Five Guys - Handcrafted Burgers</title>
-    <style>
-        /* General Reset */
-        body, h1, h2, p, ul, li, a, img {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            background-color: #d52d3a;
-            color: white;
-            padding: 20px 10px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background-color: #292c35;
-            padding: 10px 0;
-            color: white;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #f8f9fa;
-        }
-
-        .dark-mode-switch {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 34px;
-            height: 20px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 20px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 14px;
-            width: 14px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-
-        input:checked + .slider {
-            background-color: #d52d3a;
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(14px);
-        }
-
-        /* Sections */
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .menu-gallery, .location-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .menu-item, .location {
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .menu-item img, .location img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background-color: #292c35;
-            color: white;
-            padding: 20px 10px;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #333;
-            color: #f8f9fa;
-        }
-
-        body.dark-mode header {
-            background-color: #111;
-        }
-
-        body.dark-mode nav {
-            background-color: #444;
-        }
-
-        body.dark-mode footer {
-            background-color: #111;
-        }
-    </style>
+    <title>Serendipia - Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <header id="header">
-        <h1>Welcome to Five Guys</h1>
-        <p>Handcrafted Burgers & Fries Since 1986</p>
+        <h1>Welcome to Serendipia</h1>
+        <p>Your one-stop shop for Beauty, Fashion, and More!</p>
     </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#locations">Locations</a>
-        <a href="#careers">Careers</a>
+        <a href="#intro">Home</a>
+        <a href="#products">Products</a>
+        <a href="#registration">Register</a>
         <div class="dark-mode-switch">
             <p>Dark Mode</p>
             <label class="switch">
@@ -167,61 +26,95 @@
         </div>
     </nav>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Five Guys has been a family-run burger joint since 1986. We serve freshly prepared burgers and fries that are made to order.</p>
+    <section id="intro">
+        <h2>Your One-Stop Shop for Beauty, Fashion, and More!</h2>
+        <p>ETA 7-14 days for your orders. Categories:</p>
+        <ul>
+            <li>Beauty</li>
+            <li>Fashion</li>
+            <li>K-Pop Merch</li>
+            <li>Snacks</li>
+            <li>Etc.</li>
+        </ul>
     </section>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-gallery">
-            <div class="menu-item">
-                <img src="assets/images/burger.jpg" alt="Classic Burger">
-                <h3>Classic Burger</h3>
-                <p>Crafted with premium beef and fresh toppings.</p>
-            </div>
-            <div class="menu-item">
-                <img src="assets/images/fries.jpg" alt="Crispy Fries">
-                <h3>Crispy Fries</h3>
-                <p>Golden fries seasoned with a blend of spices.</p>
-            </div>
-            <div class="menu-item">
-                <img src="assets/images/milkshake.jpg" alt="Milkshake">
-                <h3>Handcrafted Milkshake</h3>
-                <p>A creamy treat in various flavors.</p>
-            </div>
+<section class="product-gallery" id="products">
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product1.jpg">
+                <img src="img/product1.jpg" alt="Product 1">
+            </picture>
+            <h3>Stand Oil Post Bag - Sand</h3>
+            <p>In Sand Color.</p>
+        </div>
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product2.jpg">
+                <img src="img/product2.jpg" alt="Product 2">
+            </picture>
+            <h3>Stand Oil Post Bag - Basil</h3>
+            <p>In Basil Color</p>
+        </div>
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product3.jpg">
+                <img src="img/product3.jpg" alt="Product 3">
+            </picture>
+            <h3>Stand Oil Post Bag - Cream</h3>
+            <p>In Cream Color</p>
+        </div>
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product4e.jpg">
+                <img src="img/product4.jpg" alt="Product 4">
+            </picture>
+            <h3>Stand Oil Post Bag - Black</h3>
+            <p>In Black Color</p>
+        </div>
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product5.jpg">
+                <img src="img/product5.jpg" alt="Product 5">
+            </picture>
+            <h3>Stand Oil Post Bag - Stitch Mocha</h3>
+            <p>In Stitch Mocha Color</p>
+        </div>
+        <div class="product">
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/product6.jpg">
+                <img src="img/product6.jpg" alt="Product 6">
+            </picture>
+            <h3>Stand Oil Bubble Bag</h3>
+            <p>In Black & White Color Only</p>
         </div>
     </section>
 
-    <section id="locations">
-        <h2>Our Locations</h2>
-        <div class="location-gallery">
-            <div class="location">
-                <img src="assets/images/location1.jpg" alt="New York">
-                <p>New York</p>
-            </div>
-            <div class="location">
-                <img src="assets/images/location2.jpg" alt="Los Angeles">
-                <p>Los Angeles</p>
-            </div>
-            <div class="location">
-                <img src="assets/images/location3.jpg" alt="Chicago">
-                <p>Chicago</p>
-            </div>
-            <div class="location">
-                <img src="assets/images/location4.jpg" alt="Miami">
-                <p>Miami</p>
-            </div>
-        </div>
-    </section>
+    <section id="registration">
+        <h2>Register to Shop Online</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <section id="careers">
-        <h2>Join Our Team</h2>
-        <p>Interested in working with us? Explore exciting career opportunities at Five Guys!</p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a Password" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Your Address" rows="3" required></textarea>
+            
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                Subscribe to our newsletter for updates and offers!
+            </label>
+            
+            <input type="submit" value="Register">
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Five Guys Enterprises, LLC. All rights reserved.</p>
+        <p>&copy; 2024 Serendipia. All rights reserved.</p>
     </footer>
 
     <script>
