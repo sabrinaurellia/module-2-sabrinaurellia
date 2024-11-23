@@ -1,79 +1,234 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile - Five Guys</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900">
+    <title>Five Guys - Handcrafted Burgers</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, ul, li, a, img {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            background-color: #d52d3a;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #292c35;
+            padding: 10px 0;
+            color: white;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f8f9fa;
+        }
+
+        .dark-mode-switch {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #d52d3a;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menu-gallery, .location-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item, .location {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .menu-item img, .location img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #292c35;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #333;
+            color: #f8f9fa;
+        }
+
+        body.dark-mode header {
+            background-color: #111;
+        }
+
+        body.dark-mode nav {
+            background-color: #444;
+        }
+
+        body.dark-mode footer {
+            background-color: #111;
+        }
+    </style>
 </head>
 <body>
-    <!-- Headbar -->
-    <header>
-        <div class="headbar-container">
-            <div class="logo-container">
-                <img src="assets/images/logo.png" alt="Five Guys Logo" class="logo">
-            </div>
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                </ul>
-            </nav>
-            <div class="action-buttons">
-                <a href="#" class="btn order-now">Order Now</a>
-            </div>
-        </div>
+    <header id="header">
+        <h1>Welcome to Five Guys</h1>
+        <p>Handcrafted Burgers & Fries Since 1986</p>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Welcome to Five Guys</h1>
-            <p>Handcrafted Burgers & Fries since 1986</p>
-            <a href="#" class="btn">Order Now</a>
-        </section>
-        
-        <!-- Other Sections -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Five Guys has been a family-run burger joint since 1986. We serve freshly prepared burgers and fries that are made to order.</p>
-            </div>
-        </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#locations">Locations</a>
+        <a href="#careers">Careers</a>
+        <div class="dark-mode-switch">
+            <p>Dark Mode</p>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
 
-        <section id="menu" class="menu">
-            <div class="container">
-                <h2>Our Menu</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <img src="assets/images/burger.jpg" alt="Burger">
-                        <p>Classic Burger</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="assets/images/fries.jpg" alt="Fries">
-                        <p>Crispy Fries</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="assets/images/milkshake.jpg" alt="Milkshake">
-                        <p>Handcrafted Milkshake</p>
-                    </div>
-                </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Five Guys has been a family-run burger joint since 1986. We serve freshly prepared burgers and fries that are made to order.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-gallery">
+            <div class="menu-item">
+                <img src="assets/images/burger.jpg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
+                <p>Crafted with premium beef and fresh toppings.</p>
             </div>
-        </section>
-    </main>
+            <div class="menu-item">
+                <img src="assets/images/fries.jpg" alt="Crispy Fries">
+                <h3>Crispy Fries</h3>
+                <p>Golden fries seasoned with a blend of spices.</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/images/milkshake.jpg" alt="Milkshake">
+                <h3>Handcrafted Milkshake</h3>
+                <p>A creamy treat in various flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations">
+        <h2>Our Locations</h2>
+        <div class="location-gallery">
+            <div class="location">
+                <img src="assets/images/location1.jpg" alt="New York">
+                <p>New York</p>
+            </div>
+            <div class="location">
+                <img src="assets/images/location2.jpg" alt="Los Angeles">
+                <p>Los Angeles</p>
+            </div>
+            <div class="location">
+                <img src="assets/images/location3.jpg" alt="Chicago">
+                <p>Chicago</p>
+            </div>
+            <div class="location">
+                <img src="assets/images/location4.jpg" alt="Miami">
+                <p>Miami</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers">
+        <h2>Join Our Team</h2>
+        <p>Interested in working with us? Explore exciting career opportunities at Five Guys!</p>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Five Guys Enterprises, LLC</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2024 Five Guys Enterprises, LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
